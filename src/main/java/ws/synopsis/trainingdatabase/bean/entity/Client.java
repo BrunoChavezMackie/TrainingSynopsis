@@ -7,13 +7,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name = "CLIENT")
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Client {
 	
 	@Id
@@ -32,5 +38,8 @@ public class Client {
 	
 	@Column(name = "CLIENT_PHONE")
 	private String phone;
+	
+    @Column(name = "CLIENT_PASSWORD")
+    private String password;
 
 }
